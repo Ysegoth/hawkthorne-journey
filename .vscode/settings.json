@@ -1,0 +1,7 @@
+{
+    "Lua.diagnostics.globals": [
+        "love"
+    ],
+    "Lua.runtime.version": "Lua 5.1",
+    "python.pythonPath": "C:\\Users\\neoci\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+}

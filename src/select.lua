@@ -61,6 +61,16 @@ function state:enter(previous)
   self.character_selections[3][0][1] = 'garrett'
   self.character_selections[3][0][2] = 'gilbert'
 
+  self.character_selections[4] = {} -- page 4
+  self.character_selections[4][0] = {} -- left
+  self.character_selections[4][1] = {} -- right
+  -- self.character_selections[4][1][0] = 'juan'
+  -- self.character_selections[4][1][1] = 'juan'
+  -- self.character_selections[4][1][2] = 'duncan'
+  self.character_selections[4][0][0] = 'juan'
+  -- self.character_selections[4][0][1] = 'duncan'
+  --self.character_selections[4][0][2] = 'juan'
+
   self.selections = self.character_selections[self.current_page]
 
   fonts.set('big')

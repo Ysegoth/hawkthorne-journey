@@ -81,3 +81,6 @@ Artwork and audio files are licensed under [CC BY-NC
 3.0](http://creativecommons.org/licenses/by-nc/3.0/). Artwork includes all
 .png, .psd, .ogg, and .wav files.
 
+///////
+
+cmd /c copy /b .\love.exe+.\test.love test.exe

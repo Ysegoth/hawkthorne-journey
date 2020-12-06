@@ -17,6 +17,7 @@ notes.html
 *.bak
 *.pyc
 Thumbs.db
+dist/
 
 save
 src/test/fixtures/Fake.app
