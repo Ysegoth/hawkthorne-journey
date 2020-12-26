@@ -47,6 +47,7 @@ function state:update(dt)
   self.annieanimation:update(dt)
   self.troyanimation:update(dt)
   self.pierceanimation:update(dt)
+  -- self.juananimation:update(dt)
 end
 
 function state:draw()
@@ -82,6 +83,7 @@ function state:draw()
   self.annieanimation:draw(self.annie, xcorner + 39, ycorner + 30)
   self.troyanimation:draw(self.troy, xcorner + 39, ycorner + 30)
   self.pierceanimation:draw(self.pierce, xcorner + 39, ycorner + 30)
+  -- self.juananimation:draw(self.pierce, xcorner + 39, ycorner + 30)
 
 end
 
@@ -92,6 +94,8 @@ function state:refresh()
   -- calculates time for each character, with and without flashing animation at end
   local ctime = rtime/7
   local ftime = ctime/3
+  local ctime = rtime/8
+  local ftime = ctime/2
   local stime = ctime - ftime
 
   self.backgrounds = love.graphics.newImage('images/scanning/backgrounds.png')
@@ -112,6 +116,7 @@ function state:refresh()
   self.annie = love.graphics.newImage('images/scanning/anniescan.png')
   self.troy = love.graphics.newImage('images/scanning/troyscan.png')
   self.pierce = love.graphics.newImage('images/scanning/piercescan.png')
+  --self.juan = love.graphics.newImage('images/scanning/juanscan.png') -- added
 
   local g1 = anim8.newGrid(400, 250, self.backgrounds:getWidth(), self.backgrounds:getHeight())
   local g2 = anim8.newGrid(75, 15, self.names:getWidth(), self.names:getHeight())
@@ -131,6 +136,7 @@ function state:refresh()
   local g14 = anim8.newGrid(121, 172, self.annie:getWidth(), self.annie:getHeight())
   local g15 = anim8.newGrid(121, 172, self.troy:getWidth(), self.troy:getHeight())
   local g16 = anim8.newGrid(121, 172, self.pierce:getWidth(), self.pierce:getHeight())
+  -- local g17 = anim8.newGrid(121, 172, self.juan:getWidth(), self.juan:getHeight()) -- added
 
   state.backgroundanimate = anim8.newAnimation('once', g1('1-2, 1', '1-2, 2', '1-2, 3', '1, 4'), ctime) 
   state.namesanimate = anim8.newAnimation('once', g2('1, 1-6', '1, 1-5', '1, 7', '1, 1-5', '1, 8', '1, 1-5', '1, 9', '1, 1-5', '1, 10', '1, 1-5', '1, 11', '1, 1-5', '1, 12' ), 
@@ -167,6 +173,7 @@ function state:refresh()
   state.annieanimation = anim8.newAnimation('once', g14('5, 4', '1-5, 1' , '1-5, 2' , '1-5, 3', '1-2, 4', '5, 4'), stime/16, {[1]=4*ctime})
   state.troyanimation = anim8.newAnimation('once', g15('5, 3', '1-7, 1', '1-7, 2', '1-2, 3', '5, 3'), stime/15, {[1]=5*ctime})
   state.pierceanimation = anim8.newAnimation('once', g16('4, 3', '2-5, 1', '1-5, 2', '1-3, 3', '4, 3'), stime/12, {[1]=6*ctime})
+  -- state.juananimation = anim8.newAnimation('once', g17('7, 3', '1-7, 1', '1-7, 2', '1-3, 3', '7, 3'), stime/17, {[1]=7*ctime}) -- added
 
 -- animation runs for rtime secs
   Timer.add(rtime, function() Gamestate.switch("select") end)
@@ -189,6 +196,7 @@ function state:leave()
   self.annie = nil
   self.troy = nil
   self.pierce = nil
+  -- self.juan = nil
 
   state.backgroundanimate = nil
   state.namesanimate = nil
@@ -206,6 +214,7 @@ function state:leave()
   state.annieanimation = nil
   state.troyanimation = nil
   state.pierceanimation = nil
+  state.juananimation = nil
 end
 
 return state

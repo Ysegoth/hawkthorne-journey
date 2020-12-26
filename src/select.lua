@@ -68,7 +68,8 @@ function state:enter(previous)
   -- self.character_selections[4][1][1] = 'juan'
   -- self.character_selections[4][1][2] = 'duncan'
   self.character_selections[4][0][0] = 'juan'
-  -- self.character_selections[4][0][1] = 'duncan'
+  self.character_selections[4][0][1] = 'miguel'
+  self.character_selections[4][1][0] = 'majo'
   --self.character_selections[4][0][2] = 'juan'
 
   self.selections = self.character_selections[self.current_page]

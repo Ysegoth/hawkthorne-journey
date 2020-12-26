@@ -1,0 +1,40 @@
+{
+  "animations": {
+    "dropwalk": {
+      "left": ["loop", ["8-10,7"], 0.16],
+      "right": ["loop", ["8-10,8"], 0.16]
+    },
+    "holdwalk": {
+      "left": ["loop", ["2-4,5"], 0.16],
+      "right": ["loop", ["2-4,6"], 0.16]
+    },
+    "hurt": {
+      "left": ["once", ["4-5,3"], 1],
+      "right": ["once", ["4-5,4"], 1]
+    },
+    "jump": {
+      "left": ["loop", ["1-3,3"], 0.16],
+      "right": ["loop", ["1-3,4"], 0.16]
+    },
+    "throwwalk": {
+      "left": ["loop", ["2-4,7"], 0.16],
+      "right": ["loop", ["2-4,8"], 0.16]
+    },
+    "wieldjump": {
+      "left": ["loop", ["1-3,3"], 0.16],
+      "right": ["loop", ["1-3,4"], 0.16]
+    }
+  },
+  "costumes": [
+    {"category": "base", "name": "Miguel Alia", "sheet": "base", "ow": 1}
+  ], 
+  "name": "miguel",
+  "bbox": {
+    "width": 14,
+    "height": 34,
+    "duck_height": 20,
+    "x": 17,
+    "y": 14
+  },
+  "offset": 8
+}

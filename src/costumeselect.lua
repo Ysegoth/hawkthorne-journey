@@ -81,6 +81,7 @@ function state:enter(previous, target)
   self.insufficient_list[13] = 'guzman'
 
   self.insufficient_list[14] = 'juan'
+  self.insufficient_list[15] = 'majo'
 
   fonts.set('big')
   self.previous = previous
